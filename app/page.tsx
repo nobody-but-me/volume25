@@ -10,12 +10,12 @@ function Video({episode, description, link, date}) {
 	            <div className="w-100 h-60 bg-[#ff0e26] rounded-lg flex flex-col justify-center"><img src="/full.jpeg" width="100%" className="" /></div>
 	        </div>
 	        <div className="w-full h-full flex flex-col justify-center text-black">
-	             <p className="tracking-[.20em] text-xl font-black font-(family-name:--font-black)">
+	             <span className="tracking-[.20em] text-xl font-black font-(family-name:--font-black)">
 	                 Episódio #{episode}
-	             </p>
-	             <p className="tracking-[.20em] text-gray-400 text-xs font-thin font-(family-name:--font-black)">
+	             </span>
+	             <span className="tracking-[.20em] text-gray-400 text-xs font-thin font-(family-name:--font-black)">
 	                 {date}
-	             </p>
+	             </span>
 	             <p className="text-sm/7 text-justify mb-2 mt-2">
 	                 {description}
 	             </p>
@@ -24,6 +24,22 @@ function Video({episode, description, link, date}) {
 	</div>
     );
 }
+
+
+function Profile({name}) {
+    return (
+	<div className="flex flex-col justify-center items-center">
+	    <div className="bg-gray-300 inset-shadow-sm inset-shadow-gray-300 hover:shadow-lg hover:-translate-y-2 transition-all rounded-full w-25 h-25 m-2 flex flex-col justify-center items-center overflow-hidden cursor-pointer">
+	         <div className="bg-gray-200 rounded-full w-10 h-10 relative top-5"></div>
+	         <div className="bg-gray-200 rounded-full w-15 h-15 relative -bottom-5"></div>
+	    </div>
+	    <span className="w-auto tracking-[.20em] text-center text-gray-700 text-xs font-thin font-(family-name:--font-black)">
+	        {name}
+	    </span>
+	</div>
+    );
+}
+
 
 function TopBar() {
     return (
@@ -48,9 +64,9 @@ function TopBar() {
 
 function Footer() {
     return (
-	<div className="p-5 h-80 border-2 border-solid border-black">
+	<section className="p-5 h-80 border-2 border-solid border-black">
 	    Footer
-	</div>
+	</section>
     );
 }
 
@@ -93,10 +109,40 @@ function Content() {
 	        <Video date="07/10/2025 - Última edição." episode={3} description="O terceiro episódio do Volume 25 aborda o pertinente tema sobre a proibição de celulares em escolas e instituições de ensino, debatendo os lados positivos e negativos da restrição. O programa contou com os convidados Dariel Carvalho, professor e especialista em tecnologia educacional, Katia Chedid, psicopedagoga e neurocientista, e Karina Martins, diretora e representante da escola Professor Antônio Guedes de Azevedo. A apresentação foi realizada por Maria Eduarda Deodato e Helena Singilo." link="https://www.youtube.com/live/k7fffm6vc0k?si=7O37tKeGr1YyPIEh" />
 	    </section>
 	    
-	    <section id="authors" className="p-5 h-full">
-	        Authors
+	    <section id="authors" className="p-5 h-auto">
+	        <p className="w-full tracking-[.20em] text-center text-xl font-black mb-5 font-(family-name:--font-black)">
+	            Autores
+	        </p>
+	        <nav className="flex flex-row justify-center items-center">
+	            <Profile name="Professora Karina Farías" />
+	        </nav>
+	        <nav className="h-auto grid grid-flow-row grid-rows-5 grid-cols-3">
+	            <Profile name="Bruna Arcanjo da Silva Santos" />
+	            <Profile name="Gabriel Augusto de Oliveira" />
+	            <Profile name="Stéphanie de Nascimento Cardoso" />
+	            <Profile name="Raíssa Lino Crisostomo" />
+	            <Profile name="Daniel Nunes Teixeira" />
+	            <Profile name="Beatriz Custódio dos Santos" />
+	            <Profile name="Isabela de Oliveira Nascimento" />
+	            <Profile name="Maria Eduarda Almeida de Moura Deodato" />
+	            <Profile name="Clara Ferreira de Morais" />
+	            <Profile name="Pedro Henrique Oliveira" />
+	            <Profile name="Pedro Inacio Barbosa dos Santos" />
+	            <Profile name="Ana Júlia de Souza" />
+	            <Profile name="Mauricio Douglas Grecco Júnior" />
+	            <Profile name="Sofia Novaes Teixeira Menezes" />
+	            <Profile name="João Pedro Vito Passaroni" />
+	            <Profile name="Enzo Reinaldo Kato" />
+	            <Profile name="Danielle Ribeiro de Andrade" />
+	            <Profile name="Rafael Rivera Fernandez Nunes" />
+	            <Profile name="Andrés Rodrigo Herrera" />
+	            <Profile name="Júlia Cardozo Santiago" />
+	            <Profile name="Helena Singilo Torres da Silva" />
+	        </nav>
+	        <nav className="flex flex-row justify-center items-center">
+	            <Profile name="Sthefany Victoria Nunes Gomes" />
+	        </nav>
 	    </section>
-	    
 	    <Footer />
 	</section>
     );
