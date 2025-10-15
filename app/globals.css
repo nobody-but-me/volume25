@@ -28,27 +28,6 @@
     --font-mono: var(--font-geist-mono);
 }
 
-a:link {
-    color: white;
-    background-color: transparent;
-    text-decoration: none;
-}
-a:visited {
-    color: #eded;
-    background-color: transparent;
-    text-decoration: none;
-}
-a:hover {
-    color: #eded;
-    background-color: transparent;
-    text-decoration: underline;
-}
-a:active {
-    color: #eded;
-    background-color: transparent;
-    text-decoration: underline;
-}
-
 body {
     font-family: "MontserratMedium";
     background: var(--background);
