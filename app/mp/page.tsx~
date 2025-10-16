@@ -1,0 +1,14 @@
+
+
+export default function MundoPerdido() {
+    return (
+	<div>
+	    <p>
+	    💩
+	    </p>
+	    <p>
+	         Este não é o conteúdo de verdade!
+	    </p>
+	</div>
+    )
+}

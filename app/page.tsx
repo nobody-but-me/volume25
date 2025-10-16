@@ -53,10 +53,10 @@ function TopBar() {
 	        />
 	    </div>
 	    <nav className="flex flex-row items-center gap-5">
-	        <Link className="w-35 text-center font-black" href="#about">Sobre</Link> 
-	        <Link className="w-35 text-center font-black" href="#episodes">Episódios</Link> 
-	        <Link className="w-35 text-center font-black" href="#authors">Autores</Link> 
-	        <Link className="w-35 text-center font-black" href="#about">Mundo Perdido...</Link> 
+	        <Link className="w-35 tracking-[.25em] text-center text-white font-(family-name:--font-black)" href="#about">Sobre</Link> 
+	        <Link className="w-35 tracking-[.25em] text-center text-white font-(family-name:--font-black)" href="#episodes">Episódios</Link> 
+	        <Link className="w-35 tracking-[.25em] text-center text-white font-(family-name:--font-black)" href="#authors">Autores</Link> 
+	        <Link className="w-45 tracking-[.25em] text-center text-white font-(family-name:--font-black)" href="/mp">Mundo Perdido...</Link> 
 	    </nav>
 	</nav>
     );
@@ -64,8 +64,17 @@ function TopBar() {
 
 function Footer() {
     return (
-	<section className="p-5 h-80 border-2 border-solid border-black">
-	    Footer
+	<section className="p-5 bg-[#f42f39] flex flex-col justify-center items-center mt-15">
+	    <div className="h-full w-1/2 flex flex-row gap-15 justify-center items-center mb-8 mt-8">
+	        <a href="/"><img src="logo.jpeg" className="w-52 h-30" alt="Volume 25" /></a>
+	        <a href="https://www2.unesp.br/" target="blank"><img src="Logo_Unesp.svg.png" className="w-45 h-15" alt="Unesp Bauru" /></a>
+	    </div>
+	    <div className="w-1/2 grid grid-rows-2 grid-cols-3 gap-5">
+	        <a href="#about" className="w-full text-white text-base/7 text-center"> Sobre </a>
+	        <a href="#episodes" className="w-full text-white text-base/7 text-center"> Episódios </a>
+	        <a href="#authors" className="w-full text-white text-base/7 text-center"> Autores </a>
+	    </div>
+	    <a href="/mp" className="w-1/6 text-white text-base/7 text-center"> Mundo Perdido... </a>
 	</section>
     );
 }
@@ -76,7 +85,12 @@ function Content() {
 	    <section className="bg-[#f42f39] h-full flex flex-col">
 	        <TopBar />
 	        <div className="pl-20 h-full flex flex-row justify-center items-center">
-	            <img src="/logo.jpeg" width="30%" className="" />
+	            <img src="/logo.jpeg" width="30%" alt="logo" className="" />
+	        </div>
+	        <div className="min-w-full flex flex-row justify-end items-center pr-3">
+	            <a href="https://www.instagram.com/volume_025?igsh=MTN1enpsOWF3MW05YQ==" target="blank" className="hover:-translate-y-2 cursor-pointer transition-all"><img src="/instagram-logo.png" width="30px" /></a>
+	            <a href="https://www.tiktok.com/@volume.025?_t=ZM-8zN6i7jgbrk&_r=1" target="blank" className="hover:-translate-y-2 cursor-pointer transition-all"><img src="/tiktok-logo.png" width="60px" /></a>
+	            <a href="https://x.com/volume_025?t=yJtJ2kFSC5ldVU_tgRB6Wg&s=09" target="blank" className="hover:-translate-y-2 cursor-pointer transition-all"><img src="/twitter-logo.png" width="30px" /></a>
 	        </div>
 	    </section>
 	    
