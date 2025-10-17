@@ -28,7 +28,26 @@
     --font-mono: var(--font-geist-mono);
 }
 
+@media (max-width: 576px) { /* PHONE RESOLUTION */
+    body {
+	overflow: hidden;
+	
+	font-family: "MontserratMedium";
+	background: var(--background);
+	color: var(--foreground);
+	
+	font-size: medium;
+	
+	font-synthesis: none;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+    }
+}
+
 body {
+    overflow: hidden;
+    
     font-family: "MontserratMedium";
     background: var(--background);
     color: var(--foreground);
@@ -39,5 +58,4 @@ body {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    
 }
