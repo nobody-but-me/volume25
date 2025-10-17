@@ -48,15 +48,17 @@ function TopBar() {
     
     const update_navbar = () => {
 	if (nav_bar_opened) {
-	    if (navbar.classList.contains("-left-100")) {
-		navbar.classList.remove("-left-100")
+	    if (navbar.classList.contains("-left-250")) {
+		navbar.classList.remove("-left-250")
 		navbar.classList.add("left-0");
+		
+		navbar.classList.remove("hidden");
 	    }
 	}
 	else {
 	    if (navbar.classList.contains("left-0")) {
 		navbar.classList.remove("left-0");
-		navbar.classList.add("-left-100");
+		navbar.classList.add("-left-250");
 	    }
 	}
     }
@@ -94,7 +96,7 @@ function TopBar() {
 	        <Link className="w-35 tracking-[.25em] text-center text-white font-(family-name:--font-black)" href="#authors">Autores</Link> 
 	        <Link className="w-45 tracking-[.25em] text-center text-white font-(family-name:--font-black)" href="/mp">Mundo Perdido...</Link> 
 	    </nav>
-	    <nav id="navbar" className="z-20 absolute flex flex-col justify-start bg-[#f42f39] shadow-lg h-screen w-screen -left-100 top-20 p-5 transition-all lg:hidden">
+	    <nav id="navbar" className="z-20 absolute flex flex-col justify-start bg-[#f42f39] shadow-lg h-screen w-screen -left-250 top-20 p-5 transition-all lg:hidden">
 	        <Link className="w-35 tracking-[.25em] text-left text-white font-(family-name:--font-black) mt-3 mb-3" onClick={() => {nav_bar_opened = false; update_navbar(); }} href="#about">Sobre</Link> 
 	        <Link className="w-35 tracking-[.25em] text-left text-white font-(family-name:--font-black) mt-3 mb-3" onClick={() => {nav_bar_opened = false; update_navbar(); }} href="#episodes">Episódios</Link> 
 	        <Link className="w-35 tracking-[.25em] text-left text-white font-(family-name:--font-black) mt-3 mb-3" onClick={() => {nav_bar_opened = false; update_navbar(); }} href="#authors">Autores</Link> 
